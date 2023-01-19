@@ -13,3 +13,17 @@
 
 <button mat-raised-button color="primary">Primary</button>
 
+
+
+
+<div class="row" *ngFor="let user of listUser">
+  <div class="col">
+  nome utente:  {{user.name}}
+    <div class="row" *ngFor="let instagra of user.contact.instagram ">
+      <div class="col">
+
+       Instagram: {{instagra}}
+      </div>
+    </div>
+  </div>
+</div>
