@@ -9,8 +9,9 @@ import { User } from './models/user';
 export class AppComponent {
   title = 'firstProjectAccademy';
 
+  variabilePadre = 'Sono il testo che viene dal padre e sto andando nel componente hello';
 
-  listString:string[] = ['matteo','simone','valerio'];
+  listString: string[] = ['matteo', 'simone', 'valerio'];
   listUser: User[] = [
     {
       name: 'matteo', surname: 'martini', age: 25, contact: {
@@ -20,7 +21,7 @@ export class AppComponent {
     },
     {
       name: 'simone', surname: 'quar', age: 25, contact: {
-        email: 'simo@ddd.it', facebook: 'simo q ', instagram: ['simo_insta','bqn'],
+        email: 'simo@ddd.it', facebook: 'simo q ', instagram: ['simo_insta', 'bqn'],
         phoneNumber: '666666'
       }
     },

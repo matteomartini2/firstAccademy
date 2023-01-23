@@ -1,29 +1,24 @@
-<mat-card>
-  <div class="row">
-    <div class="col">PRIMA LEZIONE ACCADEMY </div>
-  </div>
-</mat-card>
 <div class="container-fluid">
+  <h1>SONO LA PAGINA  APP COMPONENT</h1>
+
+  <mat-card>
+    <div class="row">
+      <div class="col">PRIMA LEZIONE ACCADEMY </div>
+    </div>
+  </mat-card>
 
   <div class="row">
     <div class="col-6">ciao </div>
     <div class="col-6">ciao</div>
   </div>
+
+  <button mat-raised-button color="primary">Primary</button>
+
+
+
+  <app-hello [listUser]="listUser"></app-hello>
+
+
+
 </div>
 
-<button mat-raised-button color="primary">Primary</button>
-
-
-
-
-<div class="row" *ngFor="let user of listUser">
-  <div class="col">
-  nome utente:  {{user.name}}
-    <div class="row" *ngFor="let instagra of user.contact.instagram ">
-      <div class="col">
-
-       Instagram: {{instagra}}
-      </div>
-    </div>
-  </div>
-</div>
