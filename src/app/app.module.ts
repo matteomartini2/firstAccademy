@@ -9,12 +9,16 @@ import {MatCardModule} from '@angular/material/card';
 import { HelloComponent } from './components/hello/hello.component';
 import { SecondPageComponent } from './features/second-page/second-page.component';
 import { RouterModule } from '@angular/router';
+import { TabbarComponent } from './components/tabbar/tabbar.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
-    SecondPageComponent
+    SecondPageComponent,
+    TabbarComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,9 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
-    RouterModule
+    RouterModule,
+    MatFormFieldModule,
+    MatIconModule
 
   ],
   providers: [],

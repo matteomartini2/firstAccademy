@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TabbarItem } from './models/tabbarItem';
 import { User } from './models/user';
 
 @Component({
@@ -28,9 +29,23 @@ export class AppComponent {
   ];
 
 
+  users: TabbarItem[] = [
+    { id: 1, country: 'Italy', name: 'Mario', desc: 'bla bla'},
+    { id: 2, country: 'Japan', name: 'Fabio'},
+    { id: 3, country: 'Spain', name: 'Ciro'},
+  ];
+
+  activeUser: TabbarItem| null = null;
+
+
+
   constructor() {
-    console.log("listUser", this.listUser);
+    console.log("activeUser",this.activeUser);
+  }
+
+
+  openDetails(user: TabbarItem) {
+    this.activeUser = user;
   }
 
 }
-

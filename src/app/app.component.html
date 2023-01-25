@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <h1>SONO LA PAGINA  APP COMPONENT</h1>
+  <h1>SONO LA PAGINA APP COMPONENT</h1>
 
   <mat-card>
     <div class="row">
@@ -7,18 +7,70 @@
     </div>
   </mat-card>
 
-  <div class="row">
-    <div class="col-6">ciao </div>
-    <div class="col-6">ciao</div>
-  </div>
+
+
 
   <button mat-raised-button color="primary">Primary</button>
 
 
 
-  <app-hello [listUser]="listUser"></app-hello>
+  <!-- <app-hello [listUser]="listUser"></app-hello> -->
+
+  <app-tabbar [items]="users" [active]="activeUser" (tabClick)="openDetails($event)"></app-tabbar>
+
+  <div class="card" *ngIf="activeUser">
+    <div class="card-header">{{activeUser.name}}</div>
+    <div class="card-body">
+      {{activeUser.desc}}
+      <img
+        src="https://maps.googleapis.com/maps/api/staticmap?center={{activeUser.country}}&zoom=5&size=200x200&key=AIzaSyBAyMH-A99yD5fHQPz7uzqk8glNJYGEqus">
+    </div>
+  </div>
+
+
+
+  <!-- //LEZIONE ROW E COL BOOSTRAP -->
+   <div class="row">
+    <div class="col-lg-3 col-md-6 col-12">
+      <mat-form-field appearance="outline">
+        <mat-label>Outline form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12">
+      <mat-form-field appearance="fill">
+        <mat-label>Fill form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="col-lg-3  col-md-6  col-12">
+      <mat-form-field appearance="fill">
+        <mat-label>Fill form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="col-lg-3 col-md-6  col-12">
+      <mat-form-field appearance="fill">
+        <mat-label>Fill form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-12 d-flex justify-content-end">PROVA Cprova prova aaaCOL SEI</div>
+
+</div>
+  <!-- FINE ES ROW E COL BOOSTRAP -->
 
 
 
 </div>
-
